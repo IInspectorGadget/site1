@@ -283,6 +283,9 @@ nav ul li:not(:first-child) {
 }
 
 @media screen and (max-width: 1050px) {
+  .header nav {
+    display: none;
+  }
   .header p {
     font-size: 2em;
     padding: 1em;
