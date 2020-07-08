@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+*
+    font-family: Open Sans
+
+h1, h2, h3, h4, p, a 
+    padding: 0 
+    margin: 0
+h1, h2, h3, h4
+    text-align: center
+a 
+    color: #fff 
+    text-decoration: none
+.container
+    max-width: 1200px
+    margin: 0 auto
+
+.header
+    height: 100vh
+    background: url('../images/header.jpg')
+    background-size: cover
+    color: #fff
+    background-attachment: fixed 
+    background-position: center
+    text-align: center
+    p
+        font-size: 3em
+        padding: 1em
+        font-weight: 600
+
+    .price
+        & span 
+            display: block
+
+    h1 
+        font-size: 4em
+        & span 
+            color: #ffda0c
+            display: block
+            text-align: center
+
+    .buttons-link
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 100%
+        a
+            margin: 10px
+            background-color: #ffda0c
+            border: solid transparent 2px
+            border-radius: 6px
+            cursor: pointer !important
+            padding: 1.2vw
+            font-size: 18px
+            color: #222
+            &:hover 
+                background-color: #fade43
+
+
+    .arrow
+        margin-top: 10em
+        transform: translate(-50%,-50%)
+
+    .arrow span
+        display: block
+        width: 1em
+        height: 1em
+        border-bottom: 5px solid #ffffff
+        border-right: 5px solid #fff
+        transform: rotate(45deg)
+        margin: -10px
+        animation: animate 2s infinite
+
+    .arrow span:nth-child(2)
+        animation-delay: -0.2s
+
+    .arrow span:nth-child(3)
+        animation-delay: -0.4s
+
+    @keyframes animate 
+        0%
+            opacity: 0
+            transform: rotate(45deg) translate(-20px,-20px)
+        
+        50%
+            opacity: 1
+        
+        100%
+            opacity: 0
+            transform: rotate(45deg) translate(20px,20px)
+    
+
+    
+
+        
+
+    .container 
+        justify-content: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        height: 100%
+   
+
+.gallery
+    padding: 2em 0
+    background-color: #f4f7f9
+    .container
+        max-width: 1400px
+    h2
+        margin-bottom: 1em
+        color:#618209
+        font-size: 3em
+    .slider
+        max-height: 600px
+        overflow: hidden
+        img
+            width: 100%
+            object-fit: cover
+    .slider-nav
+        overflow: hidden
+        img
+            padding: 20px
+            
+            border: 1px solid gray
+        .slick-track
+            overflow: hidden
+        .slick-center
+        .slick-dots
+            width: 100%
+            margin-top: 1em
+            text-align: center
+            .slick-active
+                button:before
+                    opacity: 1
+            li
+                position: relative
+                display: inline-block
+                width: 20px
+                height: 20px
+                margin: 0 5px
+                padding: 0
+                cursor: pointer
+                button
+                    font-size: 0
+                    line-height: 0
+                    display: block
+                    width: 20px
+                    height: 20px
+                    padding: 5px
+                    cursor: pointer
+                    color: transparent
+                    border: 0
+                    outline: none
+                    background: transparent
+                    &:before
+                        font-family: 'slick'
+                        font-size: 2rem
+                        line-height: 20px
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 20px
+                        height: 20px
+                        content: '•'
+                        text-align: center
+                        opacity: .25
+                        color: black
+
+
+
+
+.feature
+    padding: 2em 0
+    .container
+        max-width: 1600px
+    h2
+        margin-bottom: 1em
+        color: #618209
+        font-size: 3em
+    .flex-list
+        display: flex 
+        flex-wrap: wrap
+        justify-content: space-between
+        .list-item
+            width: 30%
+            padding: 10px
+            display: flex
+            flex-direction: column
+            text-align: center
+
+            .title
+                color: #98ac63
+                font-size: 3em
+                font-weight: 700
+            .discription
+                font-size: 1.5em
+
+.infrastructure
+
+ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+    li 
+
+
+
+nav 
+    width: calc(100vw - 20vw)
+    padding: 0 10vw
+    font-size: 1.2em
+    position: fixed
+    display: flex
+    background-color: #1e2024
+    justify-content: space-between
+    align-items: center
+    z-index: 999
+    .right-side
+    .phone
+        font-size: 1.2em
+        padding: 0
+        
+    ul
+        display: flex
+        li
+            padding-bottom: 1em
+            padding-top: 1em
+            &:not(:first-child)
+                padding-left: 1em
+
+
+
+@media screen and  (max-width: 1050px)
+    .header
+        p
+            font-size: 2em
+            padding: 1em
+            font-weight: 600
+        h1 
+            font-size: 3em
+    .buttons-link
+        a
+            padding: 15px 
+    .feature .flex-list .list-item
+        width: 46%
+@media screen and  (max-width: 760px)
+    .feature .flex-list .list-item
+        width: 100%
+@media screen and  (max-width: 470px)
+    .header
+        .buttons-link
+            a
+                font-size: 0.8em
+    .header
+        p
+            font-size: 1.5em
+            padding: 1em
+            font-weight: 600
+        h1 
+            font-size: 2.5em
+    .feature
+        h2
+            font-size: 2em
+        .flex-list .list-item .title
+            font-size: 2em
+        .flex-list .list-item .discription
+            font-size: 1em
